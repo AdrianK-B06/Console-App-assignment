@@ -17,11 +17,17 @@ namespace MyCsharp
             // Prints various predefined variables
             PrintVars();
 
+            Console.WriteLine("\n");
+
             // Prints a list of car brands
             PrintCars();
 
+            Console.WriteLine("\n");
+
             // Prints a shopping list
             PrintList();
+
+            Console.WriteLine("\n");
 
             // Create a new person instance and print their details
             Person person = new("Ola Nordmann", 42);
@@ -30,15 +36,27 @@ namespace MyCsharp
 
             Console.WriteLine("Age: " + person.Age);
 
+            Console.WriteLine("\n");
+
             // Perform some arithmetic operations and print results
             Numbers();
+
+            Console.WriteLine("\n");
 
             // Splits a sentence into words and print each word
             Split();
 
+            Console.WriteLine("\n");
+
             // Create a dog instance and make it "speak"
             Dog dog = new();
             dog.Speak();
+
+            // Create a cow instance and make it "speak"
+            Cow cow = new();
+            cow.Speak();
+
+            Console.WriteLine("\n");
 
             // Calculate and display the estimated population growth
             PeopleOnEarth();
@@ -167,9 +185,19 @@ namespace MyCsharp
             }
         }
 
+        class Cow : IAnimal
+        {
+            // Implement the Speak method for Cow
+            public void Speak()
+            {
+                Console.WriteLine("Moo!");
+            }
+        }
+
 
         static void PeopleOnEarth()
         {
+            // Calculate and print estimated population growth by year
             int startYear = 1950;
             int endYear = 2024;
             double startPopulation = 2.5e9; // Start population in billions
